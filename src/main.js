@@ -68,7 +68,7 @@ let step = () => {
     if(n + 1 < string.length){
     step()
     }    
-    },10)
+    },50)
 }
 
 step()
