@@ -2,7 +2,7 @@ let html1 = document.querySelector('#html1')
 let style = document.querySelector('#style')
 let n = -1
 let string = `
-/* 你好，我是小于
+/* 你好，我是小余
 * 接下来我演示一下我的前端功底
 * 首先我要准备一个div
 */
