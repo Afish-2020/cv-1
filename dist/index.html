@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>余朝靖的简历</title>
+  </head>
+  <body>
+    <style id="style"></style>
+    <div id="html1"></div>
+    <div id="wrapperdiv">
+      <div id="div1"></div>
+    </div>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      *::before {
+        box-sizing: border-box;
+      }
+      *::after {
+        box-sizing: border-box;
+      }
+      #html1 {
+        word-break: break-all;
+      }
+      #div1 {
+        position: fixed; /*脱离文档流*/
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #div1::before {
+        content: ""; /*没有内容也必须存在，才能创建一个伪元素*/
+        display: block;
+        position: absolute; /*相对于div1的绝对定位*/
+      }
+      #div1::after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+      /*手机端需要使用的*/
+      @media (max-width: 500px) {
+        #html1 {
+          height: 50vh; /*html1和八卦图将页面分成两半*/
+          overflow: auto; /*溢出隐藏*/
+        }
+        /*由于将height: 50vh写在div1里面会使圆变形，所以需要在外面包裹一个div，将height: 50vh放在里面*/
+        #wrapperdiv {
+          height: 50vh;
+        }
+        #div1 {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+</style>
+    <script src="index.bd78eeec.js"></script>
+  </body>
+</html>
